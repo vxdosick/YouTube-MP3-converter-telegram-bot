@@ -1,0 +1,52 @@
+# =========================
+# Python cache and bytecode
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class            
+
+# =========================
+# Build artifacts
+# =========================
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+
+# =========================
+# Environment files
+# =========================
+.env
+.env.*
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Jupyter notebooks
+# =========================
+.ipynb_checkpoints/
