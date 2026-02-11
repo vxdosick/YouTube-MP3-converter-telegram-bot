@@ -6,6 +6,8 @@ if [ -z "$BOT_TOKEN" ]; then
   exit 1
 fi
 
+ngrok config add-authtoken $NGROK_AUTHTOKEN --log=stdout || true
+
 ngrok http 8000 &
 NGROK_PID=$!
 

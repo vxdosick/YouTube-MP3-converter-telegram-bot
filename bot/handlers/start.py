@@ -7,7 +7,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
     
     await update.message.reply_text(
-        "👋 Hi there! I am your personal AI assistant manager for CV matters 📄.\n"
-        "🧑‍💼 Tell me about yourself and your professional experience right here in the chat,"
-        "and I will create the perfect CV for you, tailored to your requirements and profession. 💼\n\n"
+        "👋 Hello, I am a YouTube video to MP3 converter.\n"
+        "🔊 Simply send me a link to the video, and I will send you only the audio in MP3 format.\n"
+        "🍭 Enjoy using it.\n"
         )

@@ -9,6 +9,8 @@ from dotenv import load_dotenv
 from bot.handlers.start import start
 from bot.handlers.convert import convert
 from bot.handlers.echo import echo
+from bot.handlers.help import help
+from bot.handlers.unknown import unknown
 
 # Callbacks
 
@@ -24,13 +26,9 @@ app = Application.builder().token(TOKEN).build()
 # Register handlers and callbacks
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("convert", convert))
-# app.add_handler(CommandHandler("help", help))
-# app.add_handler(CommandHandler("create_new_cv", create_new_cv))
-# app.add_handler(CommandHandler("buy_credits", buy_credits))
-# app.add_handler(CommandHandler("show_saved_cv", show_saved_cv))
-# app.add_handler(CommandHandler("privacy", privacy))
+app.add_handler(CommandHandler("help", help))
 app.add_handler(MessageHandler(filters.ALL & ~filters.COMMAND, echo))
-# app.add_handler(MessageHandler(filters.COMMAND, unknown))
+app.add_handler(MessageHandler(filters.COMMAND, unknown))
 # app.add_handler(CallbackQueryHandler(save_cv, pattern=r"^save_cv"))
 # app.add_handler(CallbackQueryHandler(delete_cv, pattern=r"^delete_cv"))
 
