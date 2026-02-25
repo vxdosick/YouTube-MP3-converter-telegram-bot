@@ -49,15 +49,11 @@ uv sync
 ```bash
 uv run uvicorn main:app --host 0.0.0.0 --port 8000
 ```
-5. Local bot run
-```bash
-uv run uvicorn main:app --host 0.0.0.0 --port 8000
-```
-6. Creating Docker image
+5. Creating Docker image
 ```bash
 docker build -t yt-music-bot .
 ```
-7. Start Docker container
+6. Start Docker container
 ```bash
 docker run -d \
   --name ytbot \
@@ -67,7 +63,7 @@ docker run -d \
   --restart unless-stopped \
   yt-music-bot
 ```
-8. Stop container
+7. Stop container
 ```bash
 docker stop ytbot
 ```
