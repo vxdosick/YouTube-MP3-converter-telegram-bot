@@ -17,6 +17,11 @@ Main use-case: quick music extraction from YouTube videos without opening browse
 - Uses modern stack with automatic ngrok tunnel + webhook setup during development
 - Clean architecture: FastAPI backend + python-telegram-bot + yt-dlp + ffmpeg
 
+### Bot Commands
+/start - 🚀 Welcome message & short instructions
+/convert - ♻️ Converter instructions
+/help - ⚙️ Show available commands
+
 ### Tech Stack
 - Python 3.12
 - python-telegram-bot
