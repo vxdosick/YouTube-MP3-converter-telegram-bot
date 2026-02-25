@@ -3,7 +3,7 @@
 __pycache__/
 *.pyc
 
-# Временные файлы
+# logs / env
 outputs/
 *.log
 temp/

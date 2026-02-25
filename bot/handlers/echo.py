@@ -5,9 +5,19 @@ import asyncio
 
 import os
 from bot.utils.download_youtube_audio import download_youtube_audio
+from bot.utils.rate_limit_function import is_rate_limited
 
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_chat.type != ChatType.PRIVATE:
+        return
+    
+    user_id = update.effective_user.id
+    
+    if is_rate_limited(user_id):
+        await update.message.reply_text(
+            "⏳ You are being rate limited.\n"
+            "Please wait a few seconds before sending another message."
+        )
         return
     
     url = update.message.text.strip()
@@ -40,9 +50,10 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 read_timeout=90,
                 write_timeout=90,
             )
-        await update.message.reply_text("✅ Done! 🎧")
+        # await update.message.reply_text("🎉 Done!")
     except Exception as e:
-        await update.message.reply_text(f"❌ Error: {e}")
+        print(e)
+        await update.message.reply_text(f"❌ Something went wrong")
     finally:
         try:
             if os.path.exists(mp3_path):

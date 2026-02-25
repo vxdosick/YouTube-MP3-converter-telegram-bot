@@ -12,4 +12,4 @@ ydl_opts = {
 }
 
 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-    ydl.download(['https://youtu.be/fAnSJQgzsog?si=Xltm0YSW2i_HMuK-'])
+    ydl.download(['url'])
