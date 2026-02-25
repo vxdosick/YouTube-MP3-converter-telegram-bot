@@ -53,7 +53,6 @@ async def setup_ngrok_and_webhook():
 @asynccontextmanager
 async def lifespan(server: FastAPI):
     await init_telegram()
-    await setup_ngrok_and_webhook()
     yield
 
 # FastAPI instance
