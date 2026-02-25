@@ -1,0 +1,21 @@
+# uv / Python
+.venv/
+__pycache__/
+*.pyc
+
+# Временные файлы
+outputs/
+*.log
+temp/
+.env
+.env.*
+
+# Git / IDE
+.git/
+.gitignore
+.idea/
+.vscode/
+
+# Docker
+Dockerfile
+.dockerignore
