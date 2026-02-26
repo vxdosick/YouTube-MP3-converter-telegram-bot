@@ -1,5 +1,4 @@
 # YouTube to MP3 Telegram Bot
-### Bot name: @yt_audiosound_converter_bot
 
 A lightweight, personal Telegram bot that instantly converts YouTube videos (mostly music) into high-quality MP3 files and sends them back to you.
 

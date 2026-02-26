@@ -1,5 +1,7 @@
 import yt_dlp
 
+URL = ""
+
 ydl_opts = {
     'format': 'bestaudio/best',
     'postprocessors': [{
@@ -12,4 +14,4 @@ ydl_opts = {
 }
 
 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-    ydl.download(['url'])
+    ydl.download([URL])
